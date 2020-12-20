@@ -14,6 +14,14 @@
 
 #pragma once
 
+#define IMGUI_OVERRIDE_DRAWVERT_STRUCT_LAYOUT struct ImDrawVert\
+{\
+    ImVec2  pos;\
+    float   posZ;\
+    ImU32   col;\
+    ImVec2  uv;\
+};
+
 //---- Define assertion handler. Defaults to calling assert().
 // If your macro uses multiple statements, make sure is enclosed in a 'do { .. } while (0)' block so it can be used as a single statement.
 //#define IM_ASSERT(_EXPR)  MyAssert(_EXPR)
